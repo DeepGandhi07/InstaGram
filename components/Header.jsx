@@ -12,7 +12,7 @@ import { HomeIcon } from "@heroicons/react/24/solid";
 import profile from ".././images/profile.JPG";
 const Header = () => {
   return (
-    <div>
+    <div className="shadow-sm border-b bg-white sticky top-0 z-50">
       <div className=" flex justify-between bg-white">
         {/* Left */}
         <div className="relative hidden lg:inline-grid  w-24 cursor-pointer">
@@ -47,7 +47,12 @@ const Header = () => {
         <div className="flex justify-end items-center space-x-4 mr-3">
           <HomeIcon className="navBtn" />
           <Bars3Icon className="h-6 md:hidden cursor-pointer" />
-          <ChatBubbleOvalLeftEllipsisIcon className="navBtn" />
+          <div className="relative navBtn">
+            <ChatBubbleOvalLeftEllipsisIcon className="navBtn" />
+            <div className="absolute -top-1 -right-3 text-xs w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse text-white">
+              10
+            </div>
+          </div>
           <PlusCircleIcon className="navBtn" />
           <UserGroupIcon className="navBtn" />
           <HeartIcon className="navBtn" />
