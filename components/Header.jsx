@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/24/solid";
-
+import profile from ".././images/profile.JPG";
 const Header = () => {
   return (
     <div>
@@ -44,13 +44,18 @@ const Header = () => {
           </div>
         </div>
         {/* Right */}
-        <div className="flex justify-end items-center space-x-4">
+        <div className="flex justify-end items-center space-x-4 mr-3">
           <HomeIcon className="navBtn" />
           <Bars3Icon className="h-6 md:hidden cursor-pointer" />
           <ChatBubbleOvalLeftEllipsisIcon className="navBtn" />
-          <PlusCircleIcon className="w-6 h-6" />
+          <PlusCircleIcon className="navBtn" />
           <UserGroupIcon className="navBtn" />
           <HeartIcon className="navBtn" />
+          <Image
+            src={profile}
+            alt="Profile Image"
+            className="h-10 w-10 rounded-full cursor-pointer"
+          />
         </div>
       </div>
     </div>
