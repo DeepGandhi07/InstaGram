@@ -1,7 +1,15 @@
 import React from "react";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import {
+  MagnifyingGlassIcon,
+  PaperAirplaneIcon,
+  ChatBubbleOvalLeftEllipsisIcon,
+  HeartIcon,
+  UserGroupIcon,
+  PlusCircleIcon,
+} from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/24/solid";
+
 const Header = () => {
   return (
     <div>
@@ -37,6 +45,10 @@ const Header = () => {
         </div>
         {/* Right */}
         <HomeIcon />
+        <ChatBubbleOvalLeftEllipsisIcon />
+        <PlusCircleIcon />
+        <UserGroupIcon />
+        <HeartIcon />
       </div>
     </div>
   );
