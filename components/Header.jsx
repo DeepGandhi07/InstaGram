@@ -1,11 +1,11 @@
 import React from "react";
 import {
   MagnifyingGlassIcon,
-  PaperAirplaneIcon,
   ChatBubbleOvalLeftEllipsisIcon,
   HeartIcon,
   UserGroupIcon,
   PlusCircleIcon,
+  Bars3Icon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/24/solid";
@@ -44,11 +44,14 @@ const Header = () => {
           </div>
         </div>
         {/* Right */}
-        <HomeIcon />
-        <ChatBubbleOvalLeftEllipsisIcon />
-        <PlusCircleIcon />
-        <UserGroupIcon />
-        <HeartIcon />
+        <div className="flex justify-end items-center space-x-4">
+          <HomeIcon className="navBtn" />
+          <Bars3Icon className="h-6 md:hidden cursor-pointer" />
+          <ChatBubbleOvalLeftEllipsisIcon className="navBtn" />
+          <PlusCircleIcon className="w-6 h-6" />
+          <UserGroupIcon className="navBtn" />
+          <HeartIcon className="navBtn" />
+        </div>
       </div>
     </div>
   );
