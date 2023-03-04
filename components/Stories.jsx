@@ -14,13 +14,18 @@ const Stories = () => {
       birthdate: faker.date.birthdate(),
       registeredAt: faker.date.past(),
     }));
+    console.log(suggestions);
     setSuggestions(suggestions);
   }, []);
 
   return (
-    <div>
+    <div className="flex space-x-2 p-6 bg-white mt-8 border-gray-200 border rounded-sm overflow-x-scroll ">
       {suggestions.map((profile) => (
-        <Story key={}/>
+        <Story
+          key={profile.userId}
+          img={profile.avatar}
+          username={profile.username}
+        />
       ))}
       {/* Story */}
       {/* Story */}
