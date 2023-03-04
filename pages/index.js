@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-gray-50 h-screen overflow-y-scroll ">
       {/* Header */}
       <Header />
       {/* Feed */}
