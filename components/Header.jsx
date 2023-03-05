@@ -59,7 +59,7 @@ const Header = () => {
           <Image
             src={profile}
             alt="Profile Image"
-            className="h-10 w-10 rounded-full cursor-pointer"
+            className="h-11 w-11 rounded-full cursor-pointer"
           />
         </div>
       </div>
