@@ -12,6 +12,7 @@ const Suggestions = () => {
       password: faker.internet.password(),
       birthdate: faker.date.birthdate(),
       registeredAt: faker.date.past(),
+      jobTitle: faker.name.jobTitle(),
     }));
     setSuggestions(suggestions);
   }, []);
@@ -31,9 +32,15 @@ const Suggestions = () => {
             src={profile.avatar}
             alt=""
           />
-          <div>
-            <h2></h2>
+          <div className="flex-1 ml-4">
+            <h2 className="font-semibold text-sm">{profile.username}</h2>
+            <h3 className="text-xs text-gray-400">
+              Works at {profile.jobTitle}
+            </h3>
           </div>
+          <button className="text-blue-400 text-sm font-semibold">
+            Follow
+          </button>
         </div>
       ))}
     </div>
