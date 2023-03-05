@@ -13,6 +13,7 @@ import profile from ".././images/profile.JPG";
 import { signIn, signOut, useSession } from "next-auth/react";
 const Header = () => {
   const { data: session } = useSession();
+
   return (
     <div className="shadow-sm border-b bg-white sticky top-0 z-50">
       <div className=" flex justify-between bg-white">
@@ -62,7 +63,7 @@ const Header = () => {
               <HeartIcon className="navBtn" />
               <img
                 onClick={signOut}
-                src={session.user.image}
+                src={session?.user?.image}
                 alt="Profile Image"
                 className="h-11 w-11 rounded-full cursor-pointer"
               />
