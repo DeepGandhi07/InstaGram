@@ -4,6 +4,7 @@ import {
   ChatBubbleOvalLeftIcon,
   PaperAirplaneIcon,
   BookmarkIcon,
+  FaceSmileIcon,
 } from "@heroicons/react/24/outline";
 import { HeartIcon } from "@heroicons/react/24/solid";
 const Post = ({ id, username, userImg, img, caption }) => {
@@ -32,11 +33,20 @@ const Post = ({ id, username, userImg, img, caption }) => {
       </div>
       {/* Caption */}
       <p className="p-5 truncate">
-        <span>{username} </span>
+        <span className="font-bold mr-1">{username} </span>
         {caption}
       </p>
       {/* Comments */}
       {/* Input Box */}
+      <form className="flex items-center p-4">
+        <FaceSmileIcon className="h-7" />
+        <input
+          type="text"
+          placeholder="Add a Comment..."
+          className="border-none flex-1 focus:ring-0 outline-none"
+        />
+        <button>Post</button>
+      </form>
       {/* <img src={userImg} alt="" />
       <img src={img} alt="" />
     <p>{caption}</p> */}
