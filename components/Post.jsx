@@ -1,5 +1,11 @@
 import React from "react";
-import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
+import {
+  EllipsisHorizontalIcon,
+  ChatBubbleOvalLeftIcon,
+  PaperAirplaneIcon,
+  BookmarkIcon,
+} from "@heroicons/react/24/outline";
+import { HeartIcon } from "@heroicons/react/24/solid";
 const Post = ({ id, username, userImg, img, caption }) => {
   return (
     <div className="bg-white my-7 border rounded-sm">
@@ -14,14 +20,26 @@ const Post = ({ id, username, userImg, img, caption }) => {
         <EllipsisHorizontalIcon className="h-5" />
       </div>
       {/* image */}
-      <img src={img} alt="" className="object-cover w-full" />
+      <img src={userImg} alt="" className="object-cover w-full" />
       {/* Buttons */}
+      <div className="flex justify-between px-4 pt-4">
+        <div className="flex space-x-4 ">
+          <HeartIcon className="btn" />
+          <ChatBubbleOvalLeftIcon className="btn" />
+          <PaperAirplaneIcon className="btn" />
+        </div>
+        <BookmarkIcon className="btn" />
+      </div>
       {/* Caption */}
+      <p className="p-5 truncate">
+        <span>{username} </span>
+        {caption}
+      </p>
       {/* Comments */}
       {/* Input Box */}
       {/* <img src={userImg} alt="" />
       <img src={img} alt="" />
-      <p>{caption}</p> */}
+    <p>{caption}</p> */}
     </div>
   );
 };

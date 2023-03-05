@@ -15,14 +15,14 @@ const Header = () => {
     <div className="shadow-sm border-b bg-white sticky top-0 z-50">
       <div className=" flex justify-between bg-white">
         {/* Left */}
-        <div className="relative hidden lg:inline-grid  w-24 cursor-pointer">
+        <div className="relative hidden lg:inline-grid  ml-2 w-24 cursor-pointer">
           <Image
             src="https://links.papareact.com/ocw"
             layout="fill"
             objectFit="contain"
           />
         </div>
-        <div className="relative w-10 h-10 lg:hidden flex-shrink-0 cursor-pointer">
+        <div className="relative w-10 h-10 mt-4 ml-2 lg:hidden flex-shrink-0 cursor-pointer">
           <Image
             src="https://links.papareact.com/jjm"
             layout="fill"
