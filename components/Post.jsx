@@ -6,7 +6,7 @@ import {
   BookmarkIcon,
   FaceSmileIcon,
 } from "@heroicons/react/24/outline";
-import { HeartIcon } from "@heroicons/react/24/solid";
+import { HeartIcon } from "@heroicons/react/24/outline";
 const Post = ({ id, username, userImg, img, caption }) => {
   return (
     <div className="bg-white my-7 border rounded-sm">
@@ -21,7 +21,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
         <EllipsisHorizontalIcon className="h-5" />
       </div>
       {/* image */}
-      <img src={userImg} alt="" className="object-cover w-full" />
+      <img src={img} alt="" className="object-cover w-full" />
       {/* Buttons */}
       <div className="flex justify-between px-4 pt-4">
         <div className="flex space-x-4 ">
