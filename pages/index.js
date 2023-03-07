@@ -7,12 +7,12 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <div className="bg-gray-50 h-screen overflow-y-scroll ">
+      {/* Modal */}
+      <Model />
       {/* Header */}
       <Header />
       {/* Feed */}
       <Feed />
-      {/* Modal */}
-      <Model />
     </div>
   );
 }

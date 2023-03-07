@@ -9,11 +9,12 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/24/solid";
-import profile from ".././images/profile.JPG";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { modalState } from "../atoms/modalAtom";
 const Header = () => {
   const { data: session } = useSession();
-
+  const [open, setOpen] = useRecoilState(modalState);
   return (
     <div className="shadow-sm border-b bg-white sticky top-0 z-50">
       <div className=" flex justify-between bg-white">
@@ -58,7 +59,10 @@ const Header = () => {
                   10
                 </div>
               </div>
-              <PlusCircleIcon className="navBtn" />
+              <PlusCircleIcon
+                onClick={() => setOpen(true)}
+                className="navBtn"
+              />
               <UserGroupIcon className="navBtn" />
               <HeartIcon className="navBtn" />
               <img

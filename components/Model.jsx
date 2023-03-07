@@ -1,7 +1,10 @@
 import React from "react";
+import { useRecoilState } from "recoil";
+import { modalState } from "../atoms/modalAtom";
 
 const Model = () => {
-  return <div>Model</div>;
+  const [open, setOpen] = useRecoilState(modalState);
+  return <div>{open && <p>Model is open</p>}</div>;
 };
 
 export default Model;
