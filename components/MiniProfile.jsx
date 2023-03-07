@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import profile from ".././images/profile.JPG";
 import { signIn, signOut, useSession } from "next-auth/react";
 const MiniProfile = () => {
   const { data: session } = useSession();
