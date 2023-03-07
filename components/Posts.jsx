@@ -1,4 +1,7 @@
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import Post from "./Post";
 
 const posts = [
@@ -20,6 +23,18 @@ const posts = [
   },
 ];
 const Posts = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(
+    () =>
+      onSnapshot(
+        query(collection(db, "posts"), orderBy("timestamp", "desc")),
+        (snapshot) => {
+          setPosts(snapshot?.docs);
+        }
+      ),
+    [db]
+  );
   return (
     <div>
       {posts.map((post) => (

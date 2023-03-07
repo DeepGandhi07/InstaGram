@@ -8,6 +8,7 @@ import { db, storage } from "../firebase";
 import {
   addDoc,
   collection,
+  doc,
   serverTimestamp,
   updateDoc,
 } from "firebase/firestore";
