@@ -7,8 +7,8 @@ const firebaseConfig = {
   projectId: "instagram-a762b",
   storageBucket: "instagram-a762b.appspot.com",
   messagingSenderId: "798807471924",
-  appId: "1:798807471924:web:1ecbd2bc7eacca247f9761",
-  measurementId: "G-W3Z6MBGS6P",
+  appId: "1:798807471924:web:f353fed325db32a37f9761",
+  measurementId: "G-FQYB0M5W8R",
 };
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
